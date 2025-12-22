@@ -3,11 +3,11 @@
 
 > A privacy-first, multi-platform framework for behavioral and sociodynamic analysis
 
-![MOSAIC Architecture](./MOSAIC.png)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)]()
+
+![MOSAIC Architecture](./MOSAIC.png)
 
 ## 🧭 What is MOSAIC?
 
