@@ -7,8 +7,6 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)]()
 
---
-
 ## 🧭 What is MOSAIC?
 
 **MOSAIC is not a simple OSINT aggregator.**
@@ -18,8 +16,6 @@ MOSAIC collects heterogeneous public data and organizes it into **behavioral dim
 
 ⚠️ MOSAIC does **not** produce psychological diagnoses or absolute truths.
 It provides **structured signals and analytical hypotheses** that must be interpreted by a human analyst.
-
---
 
 ## 🎯 Vision
 
@@ -41,8 +37,6 @@ Content production, themes, visibility, narrative consistency
 (YouTube, Medium)
 
 This multi-angle approach enables **sociodynamic, security, and credibility analyses** that remain contextual, explainable, and privacy-aware.
-
---
 
 ## 🚀 Quick Start
 
@@ -68,8 +62,6 @@ nano modules/config.yaml
 python3 run_mosaic.py
 ```
 
---
-
 ## 🌍 Use Cases
 
 ### 🎯 Talent & Expertise Assessment
@@ -92,7 +84,7 @@ Identify exposure risks, oversharing patterns, and inconsistencies in public pre
 
 Cross-validate claims and behavioral consistency across platforms.
 
-**Example:**Before a partnership or investment, evaluate whether public behavior aligns with stated expertise and responsibilities.
+**Example:** Before a partnership or investment, evaluate whether public behavior aligns with stated expertise and responsibilities.
 
 ### 🔬 Behavioral & Sociodynamic Research
 
@@ -103,8 +95,6 @@ Study:
 - cross-platform behavioral shifts
 
 **Example:** Analyze how technical authority translates (or not) into social influence across different ecosystems.
-
---
 
 ## 🧩 Core Workflow
 ### 1️⃣ Collect — Multi-Source Signals
@@ -120,24 +110,20 @@ MOSAIC gathers **heterogeneous public data** to avoid mono-platform bias.
 
 Future sources (research ideas): professional platforms, forums, niche communities. Contributions and discussions are welcome.
 
---
-
 ### 2️⃣ Context — Analytical Framing
 
 Analysis is guided by **contextual prompts**, not generic instructions.
 
 Available contexts (Alpha):
-``Recruitment.md`` — technical & soft skills assessment
-``OPSEC_audit.md`` — digital footprint & exposure analysis
-``Threat_Intelligence.md`` — attribution & consistency research
-``PoC.md`` — quick exploratory analysis
+- ``Recruitment.md`` — technical & soft skills assessment
+- ``OPSEC_audit.md`` — digital footprint & exposure analysis
+- ``Threat_Intelligence.md`` — attribution & consistency research
+- ``PoC.md`` — quick exploratory analysis
 
-Prompts are Markdown templates stored in modules/prompts/.
+Prompts are Markdown templates stored in ``modules/prompts/``.
 
 ⚠️ Alpha note
 Current prompts prioritize **architecture and extensibility** over refinement. MOSAIC assumes analysts will adapt prompts to their methodology and domain.
-
---
 
 ### 3️⃣ Analysis — AI as an Assistant
 
@@ -161,8 +147,6 @@ Supported models: mistral, llama, qwen, etc.
 
 💡 Best results are obtained when combining MOSAIC outputs with external context (CVs, interviews, references, timelines).
 
---
-
 ### 4️⃣ Insights — Human-Centered Interpretation
 
 Insight quality depends on:
@@ -172,8 +156,6 @@ Insight quality depends on:
 - model capabilities
 
 MOSAIC provides structure and signals. You provide judgment.
-
---
 
 ## ⚠️ Ethical & Legal Framework
 
@@ -191,13 +173,11 @@ MOSAIC is designed for legitimate, consensual, and lawful use.
 
 - No mandatory cloud usage
 - Local analysis by default
-- Results stored locally (```results/``, ``.git-ignored``)
+- Results stored locally (``results/``, ``.git-ignored``)
 - Users are responsible for GDPR and local compliance
 - Credentials stored securely in ``config.yaml``
 
 By using MOSAIC, you agree to use it **ethically, responsibly, and legally**.
-
---
 
 ## 🤝 Community & Contributions
 
@@ -208,8 +188,6 @@ Questions, ideas, or research directions?
 - 📖 Wiki: coming soon
 
 MOSAIC is a **methodological framework** — contributions that improve prompts, analysis logic, or ethical safeguards are especially welcome.
-
---
 
 Made with 🔍 by Or1un
 
