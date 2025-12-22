@@ -1,0 +1,16 @@
+# Multi-Platform OSINT Extractor - Dependencies
+# Python 3.8+
+
+# Core dependencies (always required)
+requests>=2.31.0
+pyyaml>=6.0
+
+# Platform-specific dependencies
+# GitHub, StackOverflow, YouTube, Bluesky, Mastodon, Reddit, Medium
+# Already covered by requests
+
+# Telegram extractor
+telethon>=1.34.0
+
+# Optional: for async support
+asyncio>=3.4.3

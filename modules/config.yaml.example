@@ -1,0 +1,191 @@
+# ============================================================================
+# MOSAIC - Configuration Template
+# ============================================================================
+# 
+# INSTRUCTIONS:
+# 1. Copy this file: cp config.yaml.example config.yaml
+# 2. Fill in your credentials below (see links for how to get them)
+# 3. config.yaml will be ignored by Git (your secrets stay private)
+#
+# IMPORTANT: Never commit config.yaml with real credentials!
+# ============================================================================
+
+# ============================================================================
+# API KEYS & CREDENTIALS
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# GitHub (Optional - increases rate limit from 60 to 5000 req/hour)
+# ----------------------------------------------------------------------------
+github:
+  token: ""  
+  # How to get: https://github.com/settings/tokens
+  # Scopes needed: public_repo, read:user
+  # Example: "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# ----------------------------------------------------------------------------
+# YouTube (Required for YouTube extraction)
+# ----------------------------------------------------------------------------
+youtube:
+  api_key: ""
+  # How to get: https://console.cloud.google.com/apis/credentials
+  # Enable: YouTube Data API v3
+  # Free tier: 10,000 requests/day
+  # Example: "AIzaSyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# ----------------------------------------------------------------------------
+# Stack Overflow (Optional - increases rate limit from 300 to 10,000 req/day)
+# ----------------------------------------------------------------------------
+stackoverflow:
+  api_key: ""
+  # How to get: https://stackapps.com/apps/oauth/register
+  # Example: "xxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# ----------------------------------------------------------------------------
+# Telegram (Required for Telegram extraction)
+# ----------------------------------------------------------------------------
+telegram:
+  api_id: ""
+  # How to get: https://my.telegram.org/apps
+  # Example: 12345678
+
+  api_hash: ""
+  # How to get: https://my.telegram.org/apps (same page as api_id)
+  # Example: "abcdef1234567890abcdef1234567890"
+
+  phone: ""
+  # Your phone number in international format
+  # Example: "+31123456789" (include country code with +)
+
+  session_name: "telegram_session"
+  # Session file name (leave as default unless you know what you're doing)
+
+# ----------------------------------------------------------------------------
+# Mastodon (No credentials needed - public API)
+# ----------------------------------------------------------------------------
+mastodon:
+  default_instance: "infosec.exchange"
+  # Default Mastodon instance to search
+  # Popular instances: mastodon.social, infosec.exchange, fosstodon.org
+
+# ----------------------------------------------------------------------------
+# Bluesky (No credentials needed - public API)
+# ----------------------------------------------------------------------------
+bluesky:
+  # Public API works without authentication
+
+# ----------------------------------------------------------------------------
+# Reddit (No credentials needed - public JSON API)
+# ----------------------------------------------------------------------------
+reddit:
+  # Public JSON API works without authentication
+
+# ----------------------------------------------------------------------------
+# Medium (No credentials needed - RSS feeds)
+# ----------------------------------------------------------------------------
+medium:
+  # RSS feeds are public
+
+
+# ============================================================================
+# EXTRACTION SETTINGS
+# ============================================================================
+
+settings:
+  # Default extraction mode
+  default_mode: "standard"  # Options: fast, standard, complete
+  
+  # Rate limiting (seconds between requests)
+  rate_limit:
+    github: 1
+    youtube: 0.5
+    stackoverflow: 1
+    telegram: 2
+    mastodon: 1
+    bluesky: 1
+    reddit: 2
+    medium: 1
+  
+  # Default limits per source
+  limits:
+    github:
+      repos: 100
+      events: 100
+    youtube:
+      videos: 50
+    stackoverflow:
+      questions: 50
+      answers: 50
+    telegram:
+      messages: 500  # AI-optimized mode
+    mastodon:
+      toots: 100
+    bluesky:
+      posts: 100
+    reddit:
+      posts: 100
+    medium:
+      articles: 25
+  
+  # Output settings
+  output:
+    directory: "outputs"
+    format: "json"  # Options: json, markdown, both
+    include_raw: false  # Include raw API responses
+    pretty_print: true
+
+
+# ============================================================================
+# DISCOVERY SETTINGS
+# ============================================================================
+
+discovery:
+  # Timeout for discovery requests (seconds)
+  timeout: 10
+  
+  # Enable/disable sources for discovery
+  enabled_sources:
+    github: true
+    youtube: false  # Requires API key
+    stackoverflow: true
+    telegram: false  # Requires authentication
+    mastodon: true
+    bluesky: true
+    reddit: true
+    medium: true
+
+
+# ============================================================================
+# NOTES & TIPS
+# ============================================================================
+
+# 1. SECURITY:
+#    - This file (config.yaml.example) is safe to commit (no secrets)
+#    - Your config.yaml with real credentials will be ignored by Git
+#    - Never share your config.yaml file with anyone
+#
+# 2. MINIMUM SETUP (works without credentials):
+#    - GitHub: Works but limited to 60 req/hour
+#    - Bluesky: Fully functional
+#    - Mastodon: Fully functional  
+#    - Reddit: Fully functional
+#    - Medium: Fully functional
+#    - StackOverflow: Works but limited to 300 req/day
+#
+# 3. REQUIRES CREDENTIALS:
+#    - YouTube: API key mandatory
+#    - Telegram: api_id, api_hash, phone mandatory
+#
+# 4. RECOMMENDED CREDENTIALS:
+#    - GitHub token: Much higher rate limits
+#    - StackOverflow API key: Higher rate limits
+#
+# 5. FIRST RUN:
+#    - Telegram will ask for authentication code (sent to your phone)
+#    - Session will be saved in telegram_session.session (ignored by Git)
+#
+# 6. CREDENTIAL SECURITY:
+#    - Use read-only tokens when possible
+#    - Rotate keys regularly
+#    - Never commit config.yaml to version control
+#    - Consider using environment variables in production
