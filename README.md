@@ -210,7 +210,7 @@ By using MOSAIC, you agree to use it **ethically, responsibly, and legally**.
 ## 🤝 Community & Contributions
 
 Questions, ideas, or research directions?
-- 📧 Email: Contact_Mosaic@proton.me
+- 📧 Email: Or1un@proton.me
 - 🐛 Issues: GitHub Issues
 - 💡 Discussions: GitHub Discussions
 - 📖 Wiki: coming soon
@@ -218,5 +218,3 @@ Questions, ideas, or research directions?
 MOSAIC is a **methodological framework** — contributions that improve prompts, analysis logic, or ethical safeguards are especially welcome.
 
 Made with 🔍 by Or1un
-
-⭐ *If MOSAIC helps your work, consider starring the repository.*
