@@ -64,6 +64,28 @@ nano modules/config.yaml
 python3 mosaic.py
 ```
 
+## 🤖 LLM Setup
+
+### 1. Install Python dependencies
+```bash
+pip install -r requirements_llm.txt
+```
+
+### 2. Install Ollama server (one-time)
+```bash
+# Linux/macOS
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows
+# Download from https://ollama.com/download
+```
+
+### 3. Start Ollama & pull models - Qwen:0.5b (PoC)
+```bash
+ollama serve &
+ollama pull qwen:0.5b
+```
+
 ## 🌍 Use Cases
 
 ### 🎯 Talent & Expertise Assessment
