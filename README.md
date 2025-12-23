@@ -7,6 +7,8 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)]()
 
+![MOSAIC Démo](./demo_MOSAIC.gif)
+
 ![MOSAIC Architecture](./MOSAIC.png)
 
 ## 🧭 What is MOSAIC?
