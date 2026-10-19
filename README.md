@@ -35,12 +35,14 @@ This is a conceptual framework. Its hypotheses are not yet empirically validated
 
 These distinctions are methodological commitments, not guarantees. Theoretical intent alone does not determine what a system does: the data it collects, the outputs it generates and the uses it makes possible matter just as much.
 
-| Designed not to | Designed to | What it takes to hold |
-|---|---|---|
-| Infer personality | Analyze how expression varies across contexts | Protocols that read variation without assigning stable traits |
-| Predict behavior | Describe the moves a position makes plausible | "Plausible" remains an inference: not a validated prediction |
-| Profile psychologically | Map a position within a field | A map turns into a portrait as soon as it attributes stable characteristics to a person |
-| Surveil | Produce a reading at a given moment, indexed in time | Dating is not enough: collection, consent, retention and use must follow the same commitment |
+| Designed not to | Designed to |
+|---|---|
+| Infer personality | Analyze how expression varies across contexts |
+| Predict behavior | Describe the moves a position makes plausible |
+| Profile psychologically | Map a position within a field |
+| Surveil | Produce a reading at a given moment, indexed in time |
+
+Each commitment holds only if practice follows it. "Plausible" remains an inference, not a validated prediction. Describing a position is not in itself a psychological profile, but it can drift toward one if it attributes stable characteristics to a person. A time-indexed reading is not in itself surveillance, but it can serve it if collection, consent, retention and use do not follow the same commitment.
 
 > The grandmaster doesn't need to know the player. The position is enough.
 
@@ -54,7 +56,7 @@ These distinctions are methodological commitments, not guarantees. Theoretical i
 
 The code is deliberately behind the theory. It collects, structures, and can produce LLM-assisted outputs. Those outputs are not yet a complete or reproducible application of the framework's protocols, which are being specified in Paper II. The current prompt templates predate the framework and will be rewritten to follow it.
 
-MOSAIC provides a grammar of analysis. It does not produce the analysis. Whatever the code outputs, the analyst stays accountable for every reading.
+MOSAIC provides a grammar for analysis, not a validated analytical procedure. The current code can produce LLM-assisted outputs, but the analyst remains accountable for interpreting them.
 
 ![MOSAIC Architecture](./MOSAIC.png)
 
@@ -80,11 +82,15 @@ ollama pull mistral:7b-instruct
 
 ## Data and use
 
-**What happens to the data**
+**Privacy-first, in practice**
+
+Privacy-first means local by default, for the analyst *and* for the person analyzed.
 - MOSAIC collects public traces from the platforms you select and stores them locally, in `results/` (git-ignored).
-- With a local model (Ollama), the analysis runs on your machine and nothing is sent to an LLM provider.
-- With a remote LLM, the data you submit **leaves your machine** and is processed under that provider's terms. Local use is recommended; it is not enforced.
+- By default, LLM-assisted analysis runs locally through Ollama; prompts and analysis data are not sent to a remote LLM provider. Collection itself still queries the source platforms.
+- A remote LLM is opt-in. If you choose one, the data you submit **leaves your machine** and is processed under that provider's terms.
 - Retention is up to you: delete `results/` when an analysis is over.
+
+Privacy-first is a design default, not a guarantee: it holds only as long as the analyst keeps to it.
 
 **Who it is for**
 
@@ -96,7 +102,6 @@ Self-analysis, sociodynamic research, and analyses with volunteer subjects. Know
 
 ## Go deeper
 
-- **Start here:** [MOSAIC — A Field Guide](https://medium.com/@or1un), the map of the article series
 - **Theory:** [Paper I — *Why*](https://www.academia.edu/165289102/MOSAIC_A_Sociological_Framework_for_Multi_Platform_Positional_Analysis) (working paper)
 - **Article series:** [The Variance is the Signal, and what follows](https://medium.com/@or1un) on Medium
 - **Coming next:** Paper II — *How* (in preparation, not yet available), with a call for volunteer analysts and subjects
